@@ -22,6 +22,7 @@ class RestaurantListView(ListAPIView):
     permission_classes = [AllowAny,]
     filter_backends = [OrderingFilter, SearchFilter,]
     search_fields = ['name', 'description', 'owner__username']
+    
 
 
 class RestaurantDetailView(RetrieveAPIView):
